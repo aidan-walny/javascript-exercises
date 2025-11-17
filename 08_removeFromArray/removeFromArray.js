@@ -1,10 +1,15 @@
-const removeFromArray = function(passed_array, passed_removable) {
-    console.log(passed_array);
-    removableIndex = passed_array.indexOf(passed_removable, 0)
-    // console.log(removableIndex);
-    passed_array.splice(removableIndex, 1);
-    return passed_array;
-    // console.log(passed_array);
+const removeFromArray = function(passed_array, ...passed_removable) {
+
+    // New empty array
+    const newArray = [];
+
+    passed_array.forEach(element)
+        if(!passed_removable.includes(element)){
+            newArray.push(element);
+        }
+
+    return newArray;
+    
 
 };
 
